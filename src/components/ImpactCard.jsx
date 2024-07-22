@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 const ImpactCard = ({ label, total, word }) => {
   return (
-    <div className="flex justify-evenly items-left flex-col py-10 lg:pr-0">
-      <h1 className="text-white poppinsSemiBold h1 -ml-12 lg:ml-0 lg:justify-start lg:text-left">
+    <div className="flex justify-evenly items-left flex-col py-2 lg:py-10 lg:pr-0">
+      <h1 className="text-white poppinsSemiBold text:md lg:h1 -ml-12 lg:ml-0 lg:justify-start lg:text-left">
         {total}
         {word}
-        <span className="text-color-gold poppinsRegular body-2 -ml-15 lg:ml-0 lg:justify-start lg:text-left">
+        <span className="text-color-gold poppinsRegular mt-5 lg:mt-0 text:sm lg:body-2 -ml-15 lg:ml-0 lg:justify-start lg:text-left">
           {word}
         </span>
       </h1>
@@ -21,7 +21,7 @@ const ImpactCard = ({ label, total, word }) => {
           ease: "easein",
           duration: 1,
         }}
-        className="poppinsRegular text-white body-1 -ml-12 lg:ml-0 "
+        className="poppinsRegular text-white text-sm max-w-20 xl:max-w-0 lg:body-1 -ml-12 lg:ml-0 "
       >
         {label}
       </motion.p>

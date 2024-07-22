@@ -45,10 +45,10 @@ const Impact = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className=" content-center text-center w-full mb-20 "
         >
-          <h1 className="text-6xl -mt-[22%] lg:text-7xl poppinsSemiBold text-darkBlue leading-normal lg:-mt-[22%] absolute w-full">
+          <h1 className="h1 -mt-[22%] mb-4 lg:text-7xl poppinsSemiBold text-darkBlue leading-normal lg:-mt-[22%] absolute w-full">
             Our impacts
           </h1>
-          <h3 className="text-xl -mt-[10%] lg:text-3xl lg:-mt-[16%] poppinsRegular font-semibold text-opacity-80 leading-normal w-full text-darkBlue absolute">
+          <h3 className="xl:text-xl md:body-1 body-2 md:px-[6%] xl:px-0 -mt-[10%] lg:text-3xl lg:-mt-[16%] poppinsRegular text-opacity-80 leading-normal w-full text-darkBlue absolute">
             Each of RAHU's program, campaign and projects is
             <br /> tailored to impact nuggets of information
           </h3>
@@ -66,7 +66,7 @@ const Impact = () => {
           <img
             src={line}
             alt="line"
-            className="w-full lg:-mt-40 object-cover relative"
+            className="w-full -mt-[4%] lg:-mt-40 object-cover relative"
           />
         </motion.div>
 
@@ -78,7 +78,7 @@ const Impact = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 0.25 }}
-          className="w-full px-10 xl:px-20 rounded-[30px] mt-2 relative"
+          className="w-full px-3 xl:px-20 rounded-[30px] mt-2 relative"
         >
           <img
             src={cover}
@@ -86,11 +86,11 @@ const Impact = () => {
             className="w-full mt-0 xl:h-[600px] xl:object-cover rounded-[30px]"
           />
         </motion.div>
-        <div className="absolute xl:h-[600px] justify-center items-center lg:left-[10%]">
+        <div className="absolute  xl:h-[600px] justify-center items-center left-4 lg:left-[5%]">
           <img
             src={top}
             alt="cover"
-            className="xl:w-full px-10 -mt-[43.7%] xl:-mt-[47%] xl:object-cover xl:h-[800px] z-100 items-center"
+            className="w-full xl:p-7 -mt-[48.7%] sm:-mt-[48%] md:-mt-[49.5%] lg:-mt-[47%] xl:-mt-[52%] object-cover md:h-[400px] xl:h-[800px] z-100 items-center"
           />
         </div>
       </div>
@@ -105,10 +105,10 @@ const Impact = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className="grid grid-cols-1 w-full px-5 lg:px-20 justify-items-center items-center mt-[10%] lg:mt-[2%]"
       >
-        <div className="h-[400px] lg:h-[700px] w-full xl:mt-[2%]">
-          <div className="text-black border-2 border-gray-600 w-[100%] h-[313px] lg:h-[700px] rounded-[30px] justify-items-center">
+        <div className="h-[250px] lg:h-[700px] w-full xl:mt-[2%]">
+          <div className="text-black border-2 border-gray-600 w-[100%] h-[200px] md:[350px] lg:h-[700px] rounded-[30px] justify-items-center">
             <MediaPlayer
-              className="w-full h-[310px] lg:h-[698px] rounded-[30px] bg-black"
+              className="w-full h-[200px] md:h-[350px] lg:h-[698px] rounded-[30px] bg-black"
               playsInline
               title="Sprite Fight"
               src="https://www.youtube.com/watch?v=r_ZXOoemDgs&pp=ygUKcmVhY2hhaGFuZA%3D%3D"
@@ -144,21 +144,21 @@ const Impact = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="flex flex-col lg:grid lg:grid-cols-1 w-full px-20 justify-items-center items-center lg:mt-20"
+        className="flex flex-col lg:grid lg:grid-cols-1 w-full px-5 lg:px-20 justify-items-center items-center md:mt-40 lg:mt-20"
       >
         <div className="lg:flex lg:flex-cols-2 gap-6 lg:h-[90%] w-full lg:mb-10">
           <div className="bg-color-darkBlue text-white p-1 lg:p-0 lg:w-[40%] rounded-[30px] lg:pl-10 lg:pr-30 ">
             <p className="poppinsSemiBold h1 lg:text-7xl text-color-gold leading-normal text-center lg:text-left lg:mt-20">
               lets talk figures
             </p>
-            <p className="body-1 p-4 text-center lg:text-left poppinsRegular lg:text-2xl leading-normal lg:mt-5 lg:mb-20">
+            <p className="body-1 p-4 text-center lg:text-left poppinsRegular md:w-full lg:text-2xl leading-normal lg:mt-5 lg:mb-20">
               RAHU inspires youth by introducing them to <br /> diverse role
               models and mentors in fields like <br /> medicine, education,
               theatre and creative arts entrepreneurship
             </p>
           </div>
           <div className="bg-color-gold text-white border-2 mt-5 lg:mt-0 border-gray-400 lg:w-[60%] justify-between rounded-[30px] p-5 lg:p-20">
-            <div className="grid grid-cols-2 gap-6 justify-between w-full">
+            <div className="grid grid-cols-2 gap-8 lg:gap-6 justify-end md:ml-20 w-full">
               {impacts.map((impact) => (
                 <ImpactDetails
                   key={impact.label}
@@ -183,7 +183,7 @@ const Impact = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           src={home6}
           alt="HOME6"
-          className="xl:object-cover w-full relative rounded-[30px]"
+          className="object-stretch xl:object-cover w-full relative rounded-[30px] h-[250px] xl:h-0"
         />
         <motion.div
           variants={{
@@ -193,13 +193,13 @@ const Impact = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className=" w-[60%] content-center text-center justify-center items-center align-middle absolute lg:mt-[8%]"
+          className="w-[80%] lg:w-[60%] content-center text-center justify-center items-center align-middle absolute lg:mt-[8%]"
         >
-          <h1 className="text-3xl mt-6 lg:text-7xl text-white leading-15 poppinsSemiBold text-center lg:mt-10">
+          <h1 className="xl:text-3xl h6 mt-6 lg:text-7xl text-white leading-15 poppinsSemiBold text-center lg:mt-10">
             Make more impact
             <br /> with us
           </h1>
-          <h3 className="text-lg lg:text-2xl leading-tight mt-1 text-white lg:leading-normal poppinsRegular text-center lg:mt-5">
+          <h3 className="text-sm lg:text-2xl leading-tight mt-1 text-white lg:leading-normal poppinsRegular text-center lg:mt-5">
             At reach a hand we believe in the power of collaboration, you
             partner <br /> with some of our programs or you can volunteer
           </h3>
@@ -208,14 +208,14 @@ const Impact = () => {
             whileHover={{ scale: "1.00" }}
             whileTap={{ scale: "0.95", rotate: "2.5deg" }}
             transition={{ duration: "0.125", ease: "easeInOut" }}
-            className="poppinsSemiBold px-8 py-2 lg:px-10 lg:py-4 bg-black text-white mt-5 lg:mt-10 mb-10 rounded-[30px] text-lg justify-center hover:bg-white hover:text-darkBlue hover:border-darkMaroon hover:border-2"
+            className="poppinsSemiBold px-8 py-2 lg:px-10 lg:py-4 bg-black text-white mt-5 lg:mt-10 mb-10 rounded-[30px] lg:text-lg justify-center hover:bg-white hover:text-darkBlue hover:border-darkMaroon hover:border-2"
           >
             Get Involved
           </motion.button>
         </motion.div>
       </div>
 
-      <div className="mt-10 xl:px-20">
+      <div className="mt-10 xl:px-10">
         <Footer />
       </div>
     </div>

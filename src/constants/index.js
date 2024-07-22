@@ -1,7 +1,7 @@
-import progie from "../assets/classy.jpg";
-import face from "../assets/face.jpg";
-import sabotage from "../assets/sabotage.jpg";
-import you from "../assets/you.jpg";
+import progie from "../assets/happening-1.jpg";
+import face from "../assets/getinvolved.jpg";
+import sabotage from "../assets/impact.jpg";
+import you from "../assets/job.jpg";
 import Rahu_icon from "../assets/rahu icon.png";
 import google from "../assets/SVG/Asset 2.svg";
 import user from "../assets/icons/Group 53.svg";
@@ -18,6 +18,12 @@ import program3 from "../assets/event_2.jpg";
 import IGD from "../assets/igd-2.png";
 import getyourmix from "../assets/get-your-mix-out.png";
 import iknow from "../assets/iknow.png";
+import first from "../assets/SVG/Asset 115-8.png";
+import second from "../assets/SVG/Asset 118-8.png";
+import third from "../assets/SVG/Asset 93-8.png";
+import fourth from "../assets/SVG/Asset 111-8.png";
+import fifth from "../assets/SVG/Asset 120-8.png";
+import sixth from "../assets/SVG/Asset 119-8.png";
 
 export const navLinks = [
   {
@@ -30,22 +36,13 @@ export const navLinks = [
     id: "2",
     href: "Impact",
     label: "Impact",
-    subLinks: [
-      { label: "Impact Stats & Numbers", href: "/" },
-      { label: "Videos of Impact stories", href: "/" },
-      { label: "Get Involved", href: "GetInvolved" },
-    ],
+    subLinks: [],
   },
   {
     id: "3",
     href: "AboutUs",
     label: "About Us",
-    subLinks: [
-      { label: "Team", href: "Team" },
-      { label: "Vision", href: "Vision" },
-      { label: "Our Story", href: "Story" },
-      { label: "Why we do what we do", href: "Vision" },
-    ],
+    subLinks: [],
   },
   { id: "4", href: "Partners", label: "Partners", subLinks: [] },
   { id: "5", href: "Events", label: "Events", subLinks: [] },
@@ -86,24 +83,28 @@ export const events = [
 
 export const impacts = [
   {
+    id: "1",
     total: "94",
     word: "",
     label: "Partnerships cultivated",
   },
   {
+    id: "2",
     total: "1545",
     word: "",
     label: "Community dialogues",
   },
   {
+    id: "3",
     total: "10.4 million",
     word: "million",
     label: "People reach on social media",
   },
   {
+    id: "4",
     total: "115385",
     word: "",
-    label: "Community dialogues",
+    label: "Community dialogue",
   },
 ];
 
@@ -112,19 +113,19 @@ export const posts = [
     image: progie,
   },
   {
+    image: face,
+  },
+  {
+    image: sabotage,
+  },
+  {
     image: you,
   },
   {
     image: progie,
   },
   {
-    image: you,
-  },
-  {
-    image: progie,
-  },
-  {
-    image: you,
+    image: face,
   },
 ];
 
@@ -182,6 +183,33 @@ export const opportunities = [
     title: "Peer Educator",
     subtext:
       "Get your mix out is a behavioural change communication program designed and implemented by RAHU in schools. Initiated in 2014, the GYM0 PROJECT uses innovative strategies t create awareness and mitigate the sexual risks.",
+  },
+];
+
+export const partners_footer = [
+  {
+    id: "1",
+    image: first,
+  },
+  {
+    id: "2",
+    image: second,
+  },
+  {
+    id: "3",
+    image: third,
+  },
+  {
+    id: "4",
+    image: fourth,
+  },
+  {
+    id: "5",
+    image: fifth,
+  },
+  {
+    id: "6",
+    image: sixth,
   },
 ];
 

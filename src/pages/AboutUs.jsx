@@ -15,6 +15,7 @@ import managers from "../assets/Teams elements/managers.png";
 import officers from "../assets/Teams elements/officers.png";
 import backdrop2 from "../assets/Artboard – 15.jpg";
 import backdrop3 from "../assets/Artboard – 17.jpg";
+import afri from "../assets/Artboard – 6.jpg";
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
 import program from "../assets/program-1.jpg";
 import { Poster } from "@vidstack/react";
@@ -176,7 +177,7 @@ const AboutUs = () => {
         className="flex flex-col lg:grid lg:grid-cols-1 w-full px-20 justify-items-center items-center lg:mt-40"
       >
         <div className="xl:flex xl:flex-cols-2 gap-6 lg:h-[100%] w-full lg:mb-10">
-          <div className=" text-black p-1 lg:p-0 lg:w-[60%] rounded-[30px] lg:pl-10 lg:pr-30 ">
+          <div className=" text-black p-1 lg:p-0 lg:w-[50%] rounded-[30px] lg:pl-10 lg:pr-30 ">
             <p className="poppinsSemiBold text-color-darkBlue mt-20 h1 text-gold leading-normal text-center lg:text-left lg:mt-20">
               Who we are
             </p>
@@ -187,7 +188,7 @@ const AboutUs = () => {
               Health & Rights and HIV/AIDS awareness and prevention
             </p>
           </div>
-          <div className="text-black border-2 mt-5 lg:mt-0 border-gray-400 lg:w-[40%] justify-between rounded-[30px]">
+          <div className="text-black border-2 mt-5 lg:mt-0 border-gray-400 lg:w-[50%] justify-between rounded-[30px]">
             <MediaPlayer
               className="w-full h-full rounded-[30px] bg-black"
               playsInline
@@ -206,20 +207,20 @@ const AboutUs = () => {
             >
               <MediaProvider>
                 <Poster
-                  className="absolute object-cover inset-0 block h-full w-full bg-black rounded-md opacity-0 transition-opacity data-[visible]:opacity-90 [&>img]:h-full [&>img]:w-full [&>img]:object-cover"
+                  className="relative object-cover inset-0 block h-full w-full bg-black rounded-md opacity-0 transition-opacity data-[visible]:opacity-90 [&>img]:h-full [&>img]:w-full [&>img]:object-cover"
                   src={program}
                   alt="Reachahand video"
                 />
               </MediaProvider>
               {!isPlaying && (
-                <PlayButton className="group ring-sky-400 relative inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-md outline-none ring-inset hover:bg-white/20 data-[focus]:ring-4">
+                <PlayButton className="group ring-sky-400 absolute mt-[60%] inline-flex h-0 xl:ml-10 xl:mb-20 w-12  cursor-pointer items-center justify-center rounded-md outline-none ring-inset hover:bg-white/20 data-[focus]:ring-4">
                   <PlayIcon
-                    size={100}
-                    className="justify-items-center relative bg-white rounded-full hidden group-data-[paused]:block"
+                    size={50}
+                    className="justify-items-center relative bg-white p-1 rounded-full hidden group-data-[paused]:block"
                   />
                   <PauseIcon
-                    size={100}
-                    className="justify-items-center relative bg-white rounded-full group-data-[paused]:hidden"
+                    size={50}
+                    className="justify-items-center relative bg-white p-1 rounded-full group-data-[paused]:hidden"
                   />
                 </PlayButton>
               )}
@@ -228,19 +229,22 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      <div className="mt-20 lg:mt-40 px-20">
+      <div className="mt-20 lg:mt-40 lg:px-20">
         <p className="h1 text-color-darkBlue p-5 text-center items-center poppinsSemiBold">
           Meet our team
         </p>
         <img
           src={team}
-          className="w-full rounded-[30px] xl:object-cover xl:h-[600px] mt-10"
+          className="w-full rounded-[30px] xl:object-cover xl:h-[600px] mt-10 px-4"
         />
       </div>
 
-      <h1 className="h1 poppinsSemiBold mt-40 text-center items-center leading-normal">
-        Dynamic , Vibrant and <br /> Purpose led
-      </h1>
+      <div className="justify-center items-center text-center">
+        <img src={afri} className="relative object-cover w-[100%]" />
+        <h1 className="h1 poppinsSemiBold -mt-[20%] ml-10 xl:ml-[30%] absolute text-center items-center leading-normal">
+          Dynamic , Vibrant and <br /> Purpose led
+        </h1>
+      </div>
 
       <motion.div
         variants={{
@@ -250,9 +254,9 @@ const AboutUs = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
-        className=" w-full justify-items-center items-center text-center mt-[10%]"
+        className=" w-full justify-items-center items-center text-center mt-[0]"
       >
-        <h3 className="poppinsRegular opacity-85 font-semibold h3 text-center">
+        <h3 className="poppinsRegular opacity-85 mt-5 xl:mt-0 h3 text-center">
           Board of Directors
         </h3>
       </motion.div>
@@ -276,26 +280,9 @@ const AboutUs = () => {
                 onClick={() => handleStaffClick(item)}
               >
                 <div className="items-center justify-center w-full mt-20 z-1">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{
-                      duration: 1,
-                      loop: Infinity,
-                      ease: "linear",
-                    }}
-                  >
+                  <motion.div>
                     {" "}
-                    <motion.img
-                      whileHover={{ rotate: 360 }}
-                      transition={{
-                        duration: 2,
-                        loop: Infinity,
-                        ease: "linear",
-                      }}
-                      src={crystal}
-                      alt="team"
-                      className="ml-10 mt-[10%]"
-                    />
+                    <img src={crystal} alt="team" className="ml-10 mt-[10%]" />
                   </motion.div>
 
                   <img
@@ -328,9 +315,7 @@ const AboutUs = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className=" w-full justify-items-center items-center text-center mt-[10%]"
       >
-        <h3 className="poppinsRegular opacity-85 font-semibold h3 text-center">
-          Managers
-        </h3>
+        <h3 className="poppinsRegular opacity-85 h3 text-center">Managers</h3>
       </motion.div>
 
       <motion.div
@@ -402,9 +387,7 @@ const AboutUs = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className=" w-full justify-items-center items-center text-center mt-[10%]"
       >
-        <h3 className="poppinsRegular opacity-85 font-semibold h3 text-center">
-          Officers
-        </h3>
+        <h3 className="poppinsRegular opacity-85 h3 text-center">Officers</h3>
       </motion.div>
 
       <motion.div
@@ -474,33 +457,33 @@ const AboutUs = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="xl:flex xl:flex-cols-2 gap-6 mt-20 xl:h-[500px] w-full px-20 lg:mt-[10%] lg:mb-40 lg:px-40"
+        className="xl:flex xl:flex-cols-2 gap-6 mt-20 xl:h-[500px] w-full px-10 lg:mt-[10%] lg:mb-40 lg:px-40"
       >
-        <div className="bg-white border-2 border-gray-400 xl:w-[45%] rounded-[30px]">
+        <div className="bg-white border-2 border-gray-400 mb-4 xl:w-[45%] rounded-[30px]">
           <img
             src={backdrop2}
             alt="drop"
             className="xl:w-[100%] xl:object-cover xl:h-[500px] rounded-[30px]"
           />
         </div>
-        <div className="bg-color-gold border-2 border-gray-400 sm:mt-10 xl:mt-0 xl:w-[55%] rounded-[30px]">
+        <div className="bg-color-gold border-2 border-gray-400 sm:mt-10 xl:mt-0 xl:w-[55%] rounded-[30px] justify-center items-center">
           <img
             src={backdrop3}
             alt="drop"
-            className="xl:w-[100%] xl:object-cover xl:h-[500px] relative rounded-[30px]"
+            className="xl:w-[100%] xl:object-cover h-[400px] xl:h-[500px] relative rounded-[30px]"
           />
           <div className="px-10 xl:px-20">
-            <p className="poppinsBold h1 leading-tight xl:leading-normal text-left sm:-mt-[38%] md:-mt-[30%] xl:-mt-[22%] absolute">
+            <p className="poppinsBold h1 leading-tight xl:leading-normal text-center lg:text-left -mt-[65%] md:-mt-[30%] xl:-mt-[22%] absolute">
               Make more impact
               <br /> with us
             </p>
-            <p className="text-left poppinsRegular body-1 leading-tight -mt-[23%] pr-20 xl:leading-normal xl:-mt-[13%] xl:pr-60 absolute">
+            <p className="text-center lg:text-left poppinsRegular body-1 leading-tight -mt-[43%] pr-20 xl:leading-normal xl:-mt-[13%] xl:pr-60 absolute">
               RAHU inspires youth by introducing them to diverse role <br />
               models and mentors in fields like medicine, education, theatre and
               creative arts entrepreneurship
             </p>
             <a href="/GetInvolved">
-              <button className="poppinsSemiBold px-4 py-2 xl:px-8 xl:py-4 bg-black absolute -mt-[12%] xl:-mt-[7%] text-white border-2 border-black mb-20 rounded-[30px] body-1 justify-center hover:bg-white hover:text-darkBlue hover:border-darkMaroon hover:border-2">
+              <button className="poppinsSemiBold ml-[23%] px-4 py-2 xl:px-8 xl:py-4 bg-black absolute -mt-[20%] flex xl:-mt-[7%] text-white border-2 border-black mb-20 rounded-[30px] body-1 justify-center hover:bg-white hover:text-darkBlue hover:border-darkMaroon hover:border-2">
                 Get involved
               </button>
             </a>

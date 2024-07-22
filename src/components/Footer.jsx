@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/new_logo.png";
-import { ContactLinks, footerLinks, socialMedia } from "../constants";
+import {
+  ContactLinks,
+  footerLinks,
+  partners_footer,
+  socialMedia,
+} from "../constants";
 import { motion } from "framer-motion";
 import footer from "../assets/Artboard – 13.jpg";
 import { useNavigate } from "react-router-dom";
@@ -28,11 +33,11 @@ const Footer = () => {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div>
+    <div className="md:items-center md:justify-center">
       <img
         src={footer}
         alt="footer"
-        className="relative w-full sm:h-[580px] lg:h-[480px] rounded-t-[35px]"
+        className="relative w-full h-[500px] sm:h-[400px] md:h-[580px] lg:h-[480px] rounded-t-[35px]"
       />
       <motion.footer
         initial={{ opacity: 0 }}
@@ -40,7 +45,7 @@ const Footer = () => {
         transition={{
           duration: 0.6,
         }}
-        className="grid grid-cols-2 gap-4 -mt-[79%] text-white lg:items-center container lg:px-20 lg:-mt-[25%] absolute lg:grid lg:grid-cols-4 lg:gap-4"
+        className="grid grid-cols-2 gap-4 w-full p-5 -mt-[110%] text-white justify-center items-center lg:px-20 md:-mt-[75%] lg:-mt-[30%] xl:-mt-[28%] absolute md:grid md:grid-cols-3 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-1"
       >
         <motion.div
           variants={{
@@ -50,7 +55,7 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-10 "
+          className="md:mt-10 "
         >
           <a href="/">
             <motion.img
@@ -59,23 +64,25 @@ const Footer = () => {
               transition={{ duration: "0.125", ease: "easeInOut" }}
               src={logo}
               alt="logo"
-              className="w-[100px] lg:w-[200px]"
+              className="w-[100px] md:w-[150px] lg:w-[200px]"
             />
           </a>
 
-          <p className="poppinsRegular body-2 mt-10 ">
+          <p className="poppinsRegular text-[10px] lg:body-2 mt-3 md:mt-10 ">
             Reach a hand Uganda is a youth <br />
             centered organisation focusing on <br /> youth empowerment programs.
           </p>
-          <p className="poppinsSemiBold body-1 mt-10 ">Partners</p>
-          <div className="flex items-center gap-5 mt-5 absolute">
-            {partners.slice(6, 12).map((item) => (
+          <p className="poppinsSemiBold text-[13px] md:body-1 md:mt-10 ">
+            Partners
+          </p>
+          <div className="flex items-center gap-2 md:gap-5 mt-5 absolute">
+            {partners_footer.map((item) => (
               <div key={item.id} className="flex flex-row justify-between">
                 <img
-                  src={item.cover_pic_url}
+                  src={item.image}
                   alt="logo"
                   onClick={() => navigate(`/PartnerDetails/${item.id}`)}
-                  className="flex-shrink-0 justify-center items-center object-cover w-10 h-10 rounded-lg"
+                  className="flex-shrink-0 justify-center items-center object-cover w-7 h-7 md:w-10 md:h-10 rounded-lg"
                 />
               </div>
             ))}
@@ -93,14 +100,14 @@ const Footer = () => {
         >
           {footerLinks.map((section, footerIndex) => (
             <div key={footerIndex}>
-              <h3 className="poppinsSemiBold body-1 mt-10 lg:mt-12">
+              <h3 className="poppinsSemiBold text-[13px] md:body-1 mt-10 md:mt-12">
                 {section.title}
               </h3>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li
                     key={linkIndex}
-                    className="lg:mt-5 poppinsRegular caption mb-2 mt-2 lg:mb-6 hover:text-gray-500"
+                    className="lg:mt-5 poppinsRegular space-y-0 leading-none text-[10px] md:caption mb-2 mt-2 lg:mb-6 hover:text-gray-500"
                   >
                     <a href={link.link}>{link.name}</a>
                   </li>
@@ -117,18 +124,18 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-5 lg:mt-10"
+          className="mt-7 lg:mt-10"
         >
           {ContactLinks.map((section, contactIndex) => (
             <div key={contactIndex}>
-              <h3 className="poppinsSemiBold body-1 mt-20 lg:mt-12">
+              <h3 className="poppinsSemiBold text-[13px] md:body-1 md:mt-10 lg:mt-12">
                 {section.title}
               </h3>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li
                     key={linkIndex}
-                    className="lg:mt-5 poppinsRegular caption mb-2 mt-2 leading-normal lg:mb-6 hover:text-gray-500"
+                    className="lg:mt-5 poppinsRegular text-[10px] md:caption mb-2 mt-2 leading-normal lg:mb-6 hover:text-gray-500"
                   >
                     <a href={link.link}>{link.name}</a>
                   </li>
@@ -137,7 +144,7 @@ const Footer = () => {
             </div>
           ))}
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 lg:gap-5">
             {socialMedia.map((item, socialIndex) => (
               <a href={item.link}>
                 <img
@@ -158,13 +165,13 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-20 lg:mt-[60px] text-center justify-center "
+          className="lg:mt-[60px] text-center justify-center "
         >
           <motion.button
             whileHover={{ scale: "1.05" }}
             whileTap={{ scale: "0.95", rotate: "2.5deg" }}
             transition={{ duration: "0.125", ease: "easeInOut" }}
-            className="py-1 px-4 lg:py-3 lg:px-10 body-1 mt-10 border-2 border-white rounded-[25px] justify-end poppinsSemiBold text-color-lightBlue"
+            className="py-1 px-4 lg:py-3 lg:px-10 text-[10px] md:body-1 md:mt-20 mt-10 border-2 border-white rounded-[25px] justify-end poppinsSemiBold text-color-lightBlue"
           >
             Subscribe Newsletter
           </motion.button>
@@ -173,7 +180,7 @@ const Footer = () => {
               whileHover={{ scale: "1.05" }}
               whileTap={{ scale: "0.95", rotate: "2.5deg" }}
               transition={{ duration: "0.125", ease: "easeInOut" }}
-              className="poppinsSemiBold mt-10 body-1"
+              className="poppinsSemiBold mt-3 lg:mt-10 text-[10px] md:body-1"
             >
               Peer Educators Academy
             </motion.h3>

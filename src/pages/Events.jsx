@@ -70,27 +70,24 @@ const Events = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className=" content-center text-center w-full "
         >
-          <div className=" leading-normal -mt-[22%] absolute w-full text-center pl-[20%]">
-            <h1 className="flex text-7xl text-color-darkBlue poppinsSemiBold leading-normal text-center">
+          <div className=" leading-normal -mt-[22%] absolute w-full text-center ml-10 xl:pl-[20%]">
+            <h1 className="flex h1 text-color-darkBlue poppinsSemiBold leading-normal text-center">
               Whats happening
               <span className="flex justify-items-center items-center px-4 p-2">
                 <img
                   src={user}
                   alt="round"
-                  width={70}
-                  className="z-10 h-[70px] border-1 border-opacity-30 border-color-darkBlue rounded-full object-cover -mr-3"
+                  className="z-10 h-[35px] xl:h-[70px] w-[35px] xl:w-[70px] border-1 border-opacity-30 border-color-darkBlue rounded-full object-cover -mr-3"
                 />
                 <img
                   src={user1}
                   alt="round"
-                  width={70}
-                  className="z-20 h-[70px] border-1 border-opacity-30 border-color-darkBlue object-cover rounded-full -mr-3"
+                  className="z-20 h-[35px] xl:h-[70px] w-[35px] xl:w-[70px] border-1 border-opacity-30 border-color-darkBlue object-cover rounded-full -mr-3"
                 />
                 <img
                   src={user3}
                   alt="round"
-                  width={70}
-                  className="z-30 h-[70px] border-1 border-opacity-30 border-color-darkBlue object-cover rounded-full"
+                  className="z-30 h-[35px] xl:h-[70px] w-[35px] xl:w-[70px] border-1 border-opacity-30 border-color-darkBlue object-cover rounded-full"
                 />
               </span>
               @RAHU

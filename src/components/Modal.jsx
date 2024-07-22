@@ -7,7 +7,7 @@ const Modal = ({ isVisible, onClose, staffMember }) => {
   if (!isVisible) return null;
   return (
     <div className="fixed w-full inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg max-w-[60%] w-full">
+      <div className="bg-white p-6 rounded-2xl max-w-[60%] w-full">
         <button onClick={onClose} className="absolute left-[76%] h3">
           X
         </button>

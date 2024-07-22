@@ -3,10 +3,11 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import line from "../assets/Artboard – 5.png";
-import cover from "../assets/Artboard – 7.png";
+import cover from "../assets/Artboard – 23.jpg";
 import backdrop from "../assets/Artboard – 6.jpg";
 import backdrop2 from "../assets/Artboard – 15.jpg";
 import backdrop3 from "../assets/Artboard – 17.jpg";
+import top from "../assets/Mask Group 62.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -84,10 +85,10 @@ const Partners = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className=" content-center text-center w-full "
         >
-          <h1 className="text-7xl poppinsSemiBold text-darkBlue leading-normal -mt-[22%] absolute w-full">
+          <h1 className="h1 poppinsSemiBold text-darkBlue leading-normal -mt-[22%] absolute w-full">
             Our partners
           </h1>
-          <h3 className="text-3xl -mt-[16%] poppinsRegular font-semibold text-opacity-80 leading-normal w-full text-darkBlue absolute">
+          <h3 className="h4 -mt-[16%] poppinsRegular text-opacity-80 leading-normal w-full text-darkBlue absolute">
             Each of RAHU's program, campaign and projects is
             <br /> tailored to impact nuggets of information
           </h3>
@@ -105,7 +106,6 @@ const Partners = () => {
         >
           <img src={line} alt="line" className="w-full -mt-40 relative" />
         </motion.div>
-
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -114,25 +114,23 @@ const Partners = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 0.25 }}
-          className="w-full px-20 rounded-[30px] -mt-[18%] absolute"
+          className="w-full px-20 rounded-[30px] mt-2 relative"
         >
           <img
             src={cover}
             alt="cover"
-            className="w-full mt-40 object-contain rounded-[30px]"
+            className="w-full mt-0 xl:h-[600px] xl:object-cover rounded-[30px]"
           />
         </motion.div>
+        <div className="absolute h-[400px] xl:h-[700px] justify-center items-center left-[12%] lg:left-[8%]">
+          <img
+            src={top}
+            alt="cover"
+            className="w-full -mt-[45.8%] object-cover z-100 items-center"
+          />
+        </div>
 
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className=" bg-[#E5F2FF] grid grid-cols-1 w-full h-full px-20 justify-items-left items-center mt-[32%] mb-20 rounded-[30px]"
-        >
+        <div className=" rounded-[30px] mx-20 ">
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -140,47 +138,9 @@ const Partners = () => {
             }}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className="mb-[10%]"
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className=" bg-[#E5F2FF] grid grid-cols-1 w-full h-full px-10 justify-items-left items-center mt-20 xl:mt-[10%] mb-20 rounded-[30px]"
           >
-            <div className="content-center text-left h-[500px] pl-10 rounded-[30px]">
-              <h1 className="text-6xl poppinsSemiBold text-gray-900 leading-normal ">
-                Strategic partners
-              </h1>
-              <h3 className="text-2xl poppinsRegular leading-normal pt-2">
-                Strategic partners are how RAHU works in partnership with other
-                organisations <br /> with similar mission, as well as
-                communities to enhance synergies, sustainability <br />
-                and ownership of programs
-              </h3>
-            </div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="grid grid-cols-6 gap-6 w-full justify-center items-center mb-[4%] -mt-20 ml-10 overflow-x-auto whitespace-nowrap no-scrollbar"
-            >
-              <div className="flex w-full cursor-pointer">
-                {strategicPartners.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => navigate(`/PartnerDetails/${item.id}`)}
-                    className="flex-shrink-0 mr-4 w-full flex justify-center items-center bg-white p-8 rounded-xl"
-                  >
-                    <img
-                      src={item.cover_pic_url}
-                      alt="team"
-                      width={135}
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </motion.div>
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -189,17 +149,19 @@ const Partners = () => {
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.8, delay: 0.25 }}
-              className="content-center text-left h-[500px] pl-10 rounded-[30px] mt-20"
+              className="mb-[10%]"
             >
-              <h1 className="text-6xl poppinsSemiBold text-gray-900 leading-normal ">
-                Implementing partners
-              </h1>
-              <h3 className="text-2xl poppinsRegular leading-normal pt-2">
-                Implementing partners are how RAHU works in partnership with
-                other organisations <br /> with similar mission, as well as
-                communities to enhance synergies, sustainability <br />
-                and ownership of programs
-              </h3>
+              <div className="content-center text-left h-[500px] pl-10 rounded-[30px]">
+                <h1 className="h3 poppinsSemiBold text-gray-900 leading-normal ">
+                  Implementing partners
+                </h1>
+                <h3 className="h6 lg:text-[22px] poppinsRegular leading-normal pt-2">
+                  Strategic partners are how RAHU works in partnership with
+                  other organisations <br /> with similar mission, as well as
+                  communities to enhance synergies, sustainability <br />
+                  and ownership of programs
+                </h3>
+              </div>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -208,14 +170,14 @@ const Partners = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="grid grid-cols-6 gap-6 w-full justify-center items-center mb-10 mt-20 overflow-x-auto whitespace-nowrap no-scrollbar"
+                className="grid grid-cols-6 gap-6 w-full justify-center items-center mb-[4%] -mt-20 ml-10 overflow-x-auto whitespace-nowrap no-scrollbar"
               >
                 <div className="flex w-full cursor-pointer">
-                  {implementingPartners.map((item, index) => (
+                  {strategicPartners.map((item, index) => (
                     <div
                       key={index}
-                      className="flex-shrink-0 mr-4 w-full flex justify-center items-center bg-white p-8 rounded-xl"
                       onClick={() => navigate(`/PartnerDetails/${item.id}`)}
+                      className="flex-shrink-0 mr-[8%] w-[70%] flex justify-center items-center bg-white px-2 py-2 rounded-3xl"
                     >
                       <img
                         src={item.cover_pic_url}
@@ -227,26 +189,6 @@ const Partners = () => {
                   ))}
                 </div>
               </motion.div>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.8, delay: 0.25 }}
-              className="content-center text-left h-[500px] pl-10 rounded-[30px] mt-20"
-            >
-              <h1 className="text-6xl poppinsSemiBold text-gray-900 leading-normal ">
-                Corporate partners
-              </h1>
-              <h3 className="text-2xl poppinsRegular leading-normal pt-2">
-                Corporate partners are how RAHU works in partnership with other
-                organisations <br /> with similar mission, as well as
-                communities to enhance synergies, sustainability <br />
-                and ownership of programs
-              </h3>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 75 },
@@ -254,29 +196,143 @@ const Partners = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="grid grid-cols-6 gap-6 w-full justify-center items-center mt-20 overflow-x-auto whitespace-nowrap no-scrollbar"
+                transition={{ duration: 0.8, delay: 0.25 }}
+                className="content-center text-left h-[500px] pl-10 rounded-[30px] mt-20"
               >
-                <div className="flex w-full cursor-pointer">
-                  {corporatePartners.map((item, index) => (
-                    <div
-                      key={index}
-                      onClick={() => navigate(`/PartnerDetails/${item.id}`)}
-                      className="flex-shrink-0 mr-4 w-full flex justify-center items-center bg-white p-8 rounded-xl"
-                    >
-                      <img
-                        src={item.cover_pic_url}
-                        alt="team"
-                        width={135}
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <h1 className="h3 poppinsSemiBold text-gray-900 leading-normal ">
+                  Implementing/Supporting partners
+                </h1>
+                <h3 className="h6 lg:text-[22px] poppinsRegular leading-normal pt-2">
+                  Implementing partners are how RAHU works in partnership with
+                  other organisations <br /> with similar mission, as well as
+                  communities to enhance synergies, sustainability <br />
+                  and ownership of programs
+                </h3>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className="grid grid-cols-6 gap-6 w-full justify-center items-center mb-10 mt-20 overflow-x-auto whitespace-nowrap no-scrollbar"
+                >
+                  <div className="flex w-full cursor-pointer">
+                    {implementingPartners.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex-shrink-0 mr-[8%] w-[70%] flex justify-center items-center bg-white px-2 py-2 rounded-3xl"
+                        onClick={() => navigate(`/PartnerDetails/${item.id}`)}
+                      >
+                        <img
+                          src={item.cover_pic_url}
+                          alt="team"
+                          width={135}
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, delay: 0.25 }}
+                className="content-center text-left h-[500px] pl-10 rounded-[30px] mt-20"
+              >
+                <h1 className="h3 poppinsSemiBold text-gray-900 leading-normal ">
+                  Strategic Supporting partners
+                </h1>
+                <h3 className="h6 lg:text-[22px] poppinsRegular leading-normal pt-2">
+                  Corporate partners are how RAHU works in partnership with
+                  other organisations <br /> with similar mission, as well as
+                  communities to enhance synergies, sustainability <br />
+                  and ownership of programs
+                </h3>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className="grid grid-cols-6 gap-6 w-full justify-center items-center mt-20 overflow-x-auto whitespace-nowrap no-scrollbar"
+                >
+                  <div className="flex w-full cursor-pointer">
+                    {corporatePartners.map((item, index) => (
+                      <div
+                        key={index}
+                        onClick={() => navigate(`/PartnerDetails/${item.id}`)}
+                        className="flex-shrink-0 mr-[8%] w-[70%] flex justify-center items-center bg-white px-2 py-2 rounded-3xl"
+                      >
+                        <img
+                          src={item.cover_pic_url}
+                          alt="team"
+                          width={135}
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, delay: 0.25 }}
+                className="content-center text-left h-[500px] pl-10 rounded-[30px] mt-20"
+              >
+                <h1 className="h3 poppinsSemiBold text-gray-900 leading-normal ">
+                  Corporate partners
+                </h1>
+                <h3 className="h6 lg:text-[22px] poppinsRegular leading-normal pt-2">
+                  Corporate partners are how RAHU works in partnership with
+                  other organisations <br /> with similar mission, as well as
+                  communities to enhance synergies, sustainability <br />
+                  and ownership of programs
+                </h3>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className="grid grid-cols-6 gap-6 w-full justify-center items-center mt-20 overflow-x-auto whitespace-nowrap no-scrollbar"
+                >
+                  <div className="flex w-full cursor-pointer">
+                    {corporatePartners.map((item, index) => (
+                      <div
+                        key={index}
+                        onClick={() => navigate(`/PartnerDetails/${item.id}`)}
+                        className="flex-shrink-0 mr-[8%] w-[70%] flex justify-center items-center bg-white px-2 py-2 rounded-3xl"
+                      >
+                        <img
+                          src={item.cover_pic_url}
+                          alt="team"
+                          width={135}
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <motion.div
           variants={{
@@ -321,7 +377,7 @@ const Partners = () => {
         </motion.div>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 px-20">
         <Footer />
       </div>
     </div>

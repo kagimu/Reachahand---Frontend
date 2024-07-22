@@ -36,11 +36,11 @@ const NavBar = () => {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.5, delay: 0.25 }}
-      className={`bg-white w-full h-[100px] lg:h-[130px] fixed top-0 left-0 z-50 lg:px-[3.5%] ${
+      className={`bg-white w-full h-[100px] lg:h-[130px] fixed top-0 left-0 z-50 px-7 md:px-15 lg:px-[3.5%] ${
         openNavigation ? "bg-white" : "bg-paleWhite backdrop-blur-sm"
       }`}
     >
-      <div className="flex bg-[#e5f3ff] lg:h-[130px] items-center rounded-b-[30px] px-5 lg:px-7.5 xl:px-20 max-lg:py-4">
+      <div className="flex bg-[#e5f3ff] lg:h-[130px] items-center rounded-b-[30px] px-10 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a href="/" className="block mt-5 rounded-xl lg:mt-2">
           <motion.img
             whileHover={{ scale: "1.00" }}
@@ -48,7 +48,7 @@ const NavBar = () => {
             transition={{ duration: "0.125", ease: "easeInOut" }}
             src={logo}
             alt="logo"
-            className="md:w-[100px] xl:w-[300px]"
+            className="w-[100px] md:w-[200px] lg:w-[250px] xl:w-[250px]"
           />
         </a>
         <div className="ml-auto lg:hidden" onClick={toggleNavigation}>
@@ -65,7 +65,7 @@ const NavBar = () => {
         >
           <div
             className={`flex flex-col justify-center gap-12 top-5 relative z-2 poppinsRegular m-auto ${
-              openNavigation ? "text-white" : "text-[#343434]"
+              openNavigation ? "text-white" : "text-[#fff]"
             } lg:flex-row`}
           >
             {navLinks.map((item) => (
@@ -73,12 +73,12 @@ const NavBar = () => {
                 key={item.id}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
-                className="relative group"
+                className="relative"
               >
                 <motion.a
                   href={item.href}
                   onClick={handleClick}
-                  className={`block relative transition-colors text-16px md:text-[16px] text-black lg:text-[23px] hover:text-lightBlue${
+                  className={`block relative transition-colors text-16px md:text-[16px] text-black lg:text-[18px] xl:text-[20px] hover:text-lightBlue${
                     location.pathname === `/${item.href}`
                       ? " poppinsSemiBold text-lightBlue z-5 border-2 border-lightBlue -mt-1 p-2 rounded-[20px]"
                       : ""
@@ -104,9 +104,9 @@ const NavBar = () => {
             ))}
           </div>
 
-          <div className="hidden xl:flex mt-7 -mr-[7%]">
+          <div className="hidden xl:flex mt-7 -mr-[7%] xl:mr-2">
             <a href="PeerFeed">
-              <motion.button className="bg-white px-8 py-4 text-[20px] text-[#343434] rounded-[30px] poppinsRegular hover:bg-[#00274e] hover:text-white hover:border-gold">
+              <motion.button className="bg-white px-6 py-4 text-[19px] text-[#343434] rounded-[30px] poppinsRegular hover:bg-[#00274e] hover:text-white hover:border-gold">
                 Peer academy
               </motion.button>
             </a>

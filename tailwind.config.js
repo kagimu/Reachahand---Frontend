@@ -84,7 +84,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[47.5rem] mx-auto px-15 md:px-10 lg:px-15 xl:max-w-[119.5rem]":
+          "@apply content-center max-w-[100%] mx-auto px-15 md:px-10 lg:px-15 xl:max-w-[119.5rem]":
             {},
         },
         ".h1": {
