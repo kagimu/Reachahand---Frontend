@@ -86,11 +86,11 @@ const Impact = () => {
             className="w-full mt-0 xl:h-[600px] xl:object-cover rounded-[30px]"
           />
         </motion.div>
-        <div className="absolute  xl:h-[600px] justify-center items-center left-4 lg:left-[5%]">
+        <div className="absolute xl:h-[600px] justify-center items-center left-[2%] md:left-[5%] lg:left-[7%] xl:left-[10%]">
           <img
             src={top}
             alt="cover"
-            className="w-full xl:p-7 -mt-[48.7%] sm:-mt-[48%] md:-mt-[49.5%] lg:-mt-[47%] xl:-mt-[52%] object-cover md:h-[400px] xl:h-[800px] z-100 items-center"
+            className="w-full xl:p-7 -mt-[48.7%] sm:-mt-[48%] md:-mt-[49.5%] lg:-mt-[47%] xl:-mt-[49.3%] object-cover md:h-[400px] xl:h-[800px] z-100 justify-center float-right"
           />
         </div>
       </div>

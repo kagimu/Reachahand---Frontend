@@ -20,6 +20,9 @@ import {
   OpportunityDetails,
   ResourceDetails,
   PeerFeed,
+  Global,
+  GetRAHU,
+  ABoutRAHU,
 } from "./pages";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -33,6 +36,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Programs" element={<Programs />} />
           <Route path="/Impact" element={<Impact />} />
+          <Route path="/GetRAHU" element={<GetRAHU />} />
+          <Route path="/ABoutRAHU" element={<ABoutRAHU />} />
+          <Route path="/Global" element={<Global />} />
           <Route path="/Partners" element={<Partners />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Events" element={<Events />} />

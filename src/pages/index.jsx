@@ -18,9 +18,15 @@ import PartnerForm from "./PartnerForm";
 import OpportunityDetails from "./OpportunityDetails";
 import ResourceDetails from "./ResourceDetails";
 import PeerFeed from "./PeerFeed";
+import Global from "./Global";
+import GetRAHU from "./GetRAHU";
+import ABoutRAHU from "./ABoutRAHU";
 
 export {
   Home,
+  GetRAHU,
+  ABoutRAHU,
+  Global,
   Contactus,
   Aboutus,
   Events,

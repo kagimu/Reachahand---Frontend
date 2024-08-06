@@ -47,7 +47,7 @@ export const navLinks = [
   { id: "4", href: "Partners", label: "Partners", subLinks: [] },
   { id: "5", href: "Events", label: "Events", subLinks: [] },
   { id: "6", href: "ContactUs", label: "Contact Us", subLinks: [] },
-  { id: "7", href: "Home", label: "RAHU Global", subLinks: [] },
+  { id: "7", href: "Global", label: "RAHU Global", subLinks: [] },
 ];
 
 export const events = [
