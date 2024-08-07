@@ -33,12 +33,13 @@ const Footer = () => {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div className="md:items-center md:justify-center">
-      <img
+    <div className="md:items-center md:justify-center"
+    >
+      {/* <img
         src={footer}
         alt="footer"
         className="relative w-full h-[500px] sm:h-[400px] md:h-[580px] lg:h-[480px] rounded-t-[35px]"
-      />
+      /> */}
       <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -46,6 +47,11 @@ const Footer = () => {
           duration: 0.6,
         }}
         className="grid grid-cols-2 gap-4 w-full p-5 -mt-[110%] text-white justify-center items-center lg:px-20 md:-mt-[75%] lg:-mt-[30%] xl:-mt-[28%] absolute md:grid md:grid-cols-3 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-1"
+        style={{
+            backgroundImage: `url(${footer})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+        }}
       >
         <motion.div
           variants={{
@@ -146,7 +152,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-3 lg:gap-5">
             {socialMedia.map((item, socialIndex) => (
-              <a href={item.link}>
+              <a key={socialIndex} href={item.link}>
                 <img
                   key={socialIndex}
                   src={item.imgUrl}

@@ -9,6 +9,17 @@ export default {
   ],
   theme: {
     extend: {
+
+      screens: {
+        'mobile-sm': '320px',   // Mobile Small
+        'mobile-md': '375px',   // Mobile Medium
+        'mobile-lg': '425px',   // Mobile Large
+        'tablet': '768px',      // Tablet
+        'laptop-sm': '1026px',  // Laptop Small
+        'laptop-lg': '1440px',  // Laptop Large
+        '4k': '2560px',         // 4K Display
+      },
+      
       colors: {
         color: {
           pink: "#ce8bcf",
