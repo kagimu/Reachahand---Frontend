@@ -22,7 +22,7 @@ const Home = () => {
           <Section5/>
         </div>
       </div>
-      <div className="">
+      <div className="w-full">
         <Footer />
       </div>
     </div>

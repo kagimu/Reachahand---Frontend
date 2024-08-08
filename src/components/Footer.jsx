@@ -33,20 +33,15 @@ const Footer = () => {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div className="md:items-center md:justify-center"
-    >
-      {/* <img
-        src={footer}
-        alt="footer"
-        className="relative w-full h-[500px] sm:h-[400px] md:h-[580px] lg:h-[480px] rounded-t-[35px]"
-      /> */}
+    <div className="mt-20">
       <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
           duration: 0.6,
         }}
-        className="grid grid-cols-2 gap-4 w-full p-5 -mt-[110%] text-white justify-center items-center lg:px-20 md:-mt-[75%] lg:-mt-[30%] xl:-mt-[28%] absolute md:grid md:grid-cols-3 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-1"
+        // className="grid grid-cols-2 gap-4 w-full p-5 -mt-[110%] text-white justify-center items-center lg:px-20 md:-mt-[75%] lg:-mt-[30%] xl:-mt-[28%] absolute md:grid md:grid-cols-3 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-1"
+        className="w-full text-white grid grid-cols-1 gap-4 p-10 lg:grid-cols-4 md:grid-cols-2 items-center"
         style={{
             backgroundImage: `url(${footer})`,
             backgroundSize: 'cover',
@@ -61,7 +56,7 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="md:mt-10 "
+          className=""
         >
           <a href="/">
             <motion.img
@@ -78,20 +73,22 @@ const Footer = () => {
             Reach a hand Uganda is a youth <br />
             centered organisation focusing on <br /> youth empowerment programs.
           </p>
-          <p className="poppinsSemiBold text-[13px] md:body-1 md:mt-10 ">
-            Partners
-          </p>
-          <div className="flex items-center gap-2 md:gap-5 mt-5 absolute">
-            {partners_footer.map((item) => (
-              <div key={item.id} className="flex flex-row justify-between">
-                <img
-                  src={item.image}
-                  alt="logo"
-                  onClick={() => navigate(`/PartnerDetails/${item.id}`)}
-                  className="flex-shrink-0 justify-center items-center object-cover w-7 h-7 md:w-10 md:h-10 rounded-lg"
-                />
-              </div>
-            ))}
+          <div>
+            <p className="poppinsSemiBold">
+              Partners
+            </p>
+            <div className="flex items-center gap-2 md:gap-2 mt-5 absolute">
+              {partners_footer.map((item) => (
+                <div key={item.id} className="flex flex-row justify-between">
+                  <img
+                    src={item.image}
+                    alt="logo"
+                    onClick={() => navigate(`/PartnerDetails/${item.id}`)}
+                    className="flex-shrink-0 justify-center items-center object-cover w-7 h-7 md:w-10 md:h-10 rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -102,11 +99,11 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="lg:mt-20"
+          className=""
         >
           {footerLinks.map((section, footerIndex) => (
             <div key={footerIndex}>
-              <h3 className="poppinsSemiBold text-[13px] md:body-1 mt-10 md:mt-12">
+              <h3 className="poppinsSemiBold mt-10">
                 {section.title}
               </h3>
               <ul>
@@ -130,11 +127,11 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-7 lg:mt-10"
+          className=""
         >
           {ContactLinks.map((section, contactIndex) => (
             <div key={contactIndex}>
-              <h3 className="poppinsSemiBold text-[13px] md:body-1 md:mt-10 lg:mt-12">
+              <h3 className="poppinsSemiBold">
                 {section.title}
               </h3>
               <ul>
@@ -150,7 +147,7 @@ const Footer = () => {
             </div>
           ))}
 
-          <div className="flex items-center gap-3 lg:gap-5">
+          <div className="flex items-center gap-3 ">
             {socialMedia.map((item, socialIndex) => (
               <a key={socialIndex} href={item.link}>
                 <img
@@ -171,13 +168,13 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="lg:mt-[60px] text-center justify-center "
+          className=""
         >
           <motion.button
             whileHover={{ scale: "1.05" }}
             whileTap={{ scale: "0.95", rotate: "2.5deg" }}
             transition={{ duration: "0.125", ease: "easeInOut" }}
-            className="py-1 px-4 lg:py-3 lg:px-10 text-[10px] md:body-1 md:mt-20 mt-10 border-2 border-white rounded-[25px] justify-end poppinsSemiBold text-color-lightBlue"
+            className="py-1 px-4 lg:py-3 lg:px-10 text-[10px] md:body-1 border-2 border-white rounded-[25px] poppinsSemiBold text-color-lightBlue"
           >
             Subscribe Newsletter
           </motion.button>
