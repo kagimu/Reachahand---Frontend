@@ -64,7 +64,7 @@ const NavBar = () => {
           } flex flex-row top-[15px] py-10 px-4 justify-between items-center w-full fixed bg-black rounded-xl bg-opacity-75 text-lg poppinsSemiBold lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div
-            className={`flex flex-col justify-center gap-8 top-5  items-center justify-center  poppinsRegular m-auto ${
+            className={`flex flex-col justify-center gap-6 top-5  items-center justify-center  poppinsRegular m-auto ${
               openNavigation ? "text-white" : "text-[#fff]"
             } lg:flex-row`}
           >
@@ -106,7 +106,7 @@ const NavBar = () => {
 
           <div className="hidden xl:flex xl:mr-2">
             <a href="PeerFeed">
-              <motion.button className="bg-white px-4 py-3 text-[19px] text-[#343434] rounded-[30px] poppinsRegular hover:bg-[#00274e] hover:text-white hover:border-gold">
+              <motion.button className="bg-white px-2 py-3 text-[19px] text-[#343434] rounded-[30px] poppinsRegular hover:bg-[#00274e] hover:text-white hover:border-gold">
                 Peer academy
               </motion.button>
             </a>
