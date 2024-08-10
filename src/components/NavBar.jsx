@@ -36,11 +36,11 @@ const NavBar = () => {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.5, delay: 0.25 }}
-      className={`bg-white w-full h-[100px] lg:h-[130px] fixed top-0 left-0 z-50 px-7 md:px-15 lg:px-[3.5%] ${
+      className={`bg-white w-full h-[100px] lg:h-[50px] fixed top-0 left-0 z-50 px-7 md:px-10 lg:px-[3.5%] ${
         openNavigation ? "bg-white" : "bg-paleWhite backdrop-blur-sm"
       }`}
     >
-      <div className="flex bg-[#e5f3ff] lg:h-[130px] items-center rounded-b-[30px] px-10 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <div className="flex bg-[#e5f3ff] lg:h-[120px] items-center rounded-b-[30px] px-10 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a href="/" className="block mt-5 rounded-xl lg:mt-2">
           <motion.img
             whileHover={{ scale: "1.00" }}
@@ -48,7 +48,7 @@ const NavBar = () => {
             transition={{ duration: "0.125", ease: "easeInOut" }}
             src={logo}
             alt="logo"
-            className="w-[100px] md:w-[200px] lg:w-[250px] xl:w-[250px]"
+            className="w-full md:w-full lg:w-full xl:w-full"
           />
         </a>
         <div className="ml-auto lg:hidden" onClick={toggleNavigation}>
@@ -75,7 +75,7 @@ const NavBar = () => {
                 onMouseLeave={handleMouseLeave}
                 className="relative"
               >
-                 <motion.a
+                <motion.a
                   href={item.href}
                   onClick={handleClick}
                   className={`block relative transition-colors text-base md:text-base text-black lg:text-base xl:text-lg hover:text-lightBlue${
