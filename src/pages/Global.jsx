@@ -21,7 +21,7 @@ const Global = () => {
         whileInView="visible"
         transition={{ duration: 0.4, delay: 0.25 }}
         src={background}
-        className="h-full w-full relative "
+        className="min-h-screen w-full "
       />
       <div className="absolute -mt-[110%] md:-mt-[110%] lg:-mt-[108%] xl:-mt-[106%]">
         <motion.div

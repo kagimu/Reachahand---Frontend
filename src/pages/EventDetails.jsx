@@ -36,7 +36,9 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchPartnerDetails = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/events/${id}`);
+        const response = await fetch(
+          `http://rahu.reachahand.org/api/events/${id}`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch partner details");
         }

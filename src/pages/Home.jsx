@@ -46,8 +46,8 @@ const Home = () => {
                 by young people
               </p>
               <h1 className="poppinsBold text-white h1 -mt-[42%] ml-14 text-left leading-tight absolute lg:-mt-[40%] ">
-                <span>We empower young</span> <br />
-                <span>people in Uganda</span>
+                <span className="poppinsSemiBold">We empower young</span> <br />
+                <span className="poppinsSemiBold">people in Uganda</span>
               </h1>
               <a href="GetInvolved">
                 <button className="bg-white lg:-mt-[14%] body-1 -mt-[14%] text-darkBlue ml-14 py-2 px-6 md:py-3 md:px-8 rounded-[25px] absolute overflow-hidden poppinsSemiBold hover:bg-black hover:text-white hover:border-2 hover:border-white">

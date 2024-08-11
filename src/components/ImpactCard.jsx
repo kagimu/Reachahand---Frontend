@@ -21,7 +21,7 @@ const ImpactCard = ({ label, total, word }) => {
           ease: "easein",
           duration: 1,
         }}
-        className="poppinsRegular text-white text-sm max-w-20 xl:max-w-0 lg:body-1 -ml-12 lg:ml-0 "
+        className="poppinsRegular text-white text-sm max-w-20 xl:max-w-[400px] lg:body-1 -ml-12 lg:ml-0 "
       >
         {label}
       </motion.p>

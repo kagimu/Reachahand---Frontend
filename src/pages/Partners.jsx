@@ -23,7 +23,7 @@ const Partners = () => {
     const fetchPartners = async () => {
       try {
         // Make GET request to your Laravel API endpoint using fetch
-        const response = await fetch("http://127.0.0.1:8000/api/partners"); // Update the URL with your actual API endpoint
+        const response = await fetch("http://rahu.reachahand.org/api/partners"); // Update the URL with your actual API endpoint
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
