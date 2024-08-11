@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ImpactCard = ({ label, total, word }) => {
   return (
-    <div className="flex justify-evenly items-left flex-col py-2 lg:py-10 lg:pr-0">
+    <div className="flex justify-evenly items-left flex-col py-2  lg:pr-0">
       <h1 className="text-white poppinsSemiBold text:md lg:h1 -ml-12 lg:ml-0 lg:justify-start lg:text-left">
         {total}
         {word}
